@@ -1,75 +1,23 @@
 
-package pdm20214;
+package pdm20215;
 
 
-public class Perro {
-    //atributos
-    String color;
-    int edad;
-    String raza;
-    String sexo;
-
-    public Perro(String color, int edad, String raza) {
-        this.color = color;
-        this.edad = edad;
-        this.raza = raza;
+public class Perro extends Animal{
+    String nombre;
+    String habilidad;
+    
+    public Perro(int cantPatas, String color, String tipo,String raza,String nombre,String habilidad){
+        super(cantPatas, color, tipo, raza);
+        this.nombre = nombre;
+        this.habilidad = habilidad;
     }
 
-    public Perro(String color, int edad, String raza, String sexo) {
-        this.color = color;
-        this.edad = edad;
-        this.raza = raza;
-        this.sexo = sexo;
+    public String getNombre() {
+        return nombre;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public String getRaza() {
-        return raza;
-    }
-
-    public void setRaza(String raza) {
-        this.raza = raza;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public String getHabilidad() {
+        return habilidad;
     }
     
-    
-    
-    
-    //metodos
-    public void comer(){
-        System.out.println("El perro come");
-    }
-    public void duerme(){
-        System.out.println("El perro esta durmiendo");
-    }
-    
-    public int devolverEdad(){
-        return edad;
-    }
-    
-    public void cambiarEdad(int edadNueva){
-        edad = edadNueva;
-    }
 }
